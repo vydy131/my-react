@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 
 function App() {
@@ -7,11 +7,11 @@ function App() {
   // )
 
 
-
+  
 
   return React.createElement('div', {className : 'container'}, 
-    React.createElement('h1', {className: 'font-bold'}, 'Test JSX'),
-    React.createElement('button', {className : ''}, 'click me')
+    React.createElement('h1', {className: 'font-bold', key:0}, 'Test JSX'),
+    React.createElement('button', {className : 'py-2, px-4 border', key:1, onClick : () => console.log('Clicked!')}, 'click me')
   )
 }
 

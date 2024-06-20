@@ -1,4 +1,7 @@
 import { Header } from "./components/Header"
+import {ways} from '../src/data'
+import {Text} from './components/Text'
+import { Button } from "./components/Button/Button"
 
 export default function App() {
   return (
@@ -6,8 +9,21 @@ export default function App() {
       <Header/>
 
       <main>
-        <h1>Main text</h1>
+        <section>
+          <h3>Text</h3>
+          <ul>
+           <Text {...ways[0]}/>
+           <Text {...ways[1]}/>
+           <Text {...ways[2]}/>
+           <Text {...ways[3]}/>
+          </ul>
+        </section>
+        <section>
+          <h3>Another text</h3>
+          <Button/>
+        </section>
       </main>
+
     </div>
   )
 }

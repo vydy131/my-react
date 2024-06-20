@@ -1,9 +1,15 @@
-function App() {
+import { Header } from "./components/Header"
+
+export default function App() {
   return (
     <div>
-      <h1>Hello React</h1>
+      <Header/>
+
+      <main>
+        <h1>Main text</h1>
+      </main>
     </div>
   )
 }
 
-export default App
+

@@ -1,23 +1,36 @@
 import { useState } from "react";
 import { Button } from "./Button/Button";
 
+function StateVSRef() {}
+
 export function FeedbackSection() {
-  const [hasError, setHasError] = useState(false);
-  const [name, setName] = useState("");
-  const [reason, setReason] = useState("help");
+  const [form, setForm] = useState({
+    name: "",
+    hasError: false,
+    reason: "help",
+  });
 
   function handleNameChange(event) {
-    setName(event.target.value);
-    setHasError(event.target.value.trim().length === 0);
+    setForm({
+      name: event.target.value,
+      hasError: event.target.value.trim().length === 0,
+      reason: form.reason,
+    });
   }
 
   function handleReasonChange(event) {
-    setReason(event.target.value);
+    setForm({
+      reason: event.target.value,
+      name: form.name,
+      hasError: form.hasError,
+    });
   }
 
   function toggleError() {
-    setHasError((prev) => !prev);
-    // setHasError(!hasError);
+    setForm((prev) => ({
+      ...prev,
+      hasError: !form.hasError,
+    }));
   }
 
   return (
@@ -32,8 +45,8 @@ export function FeedbackSection() {
           type="text"
           id="name"
           className="control"
-          value={name}
-          style={{ border: hasError ? "1px solid red" : null }}
+          value={form.name}
+          style={{ border: form.hasError ? "1px solid red" : null }}
           onChange={handleNameChange}
         />
 
@@ -41,19 +54,15 @@ export function FeedbackSection() {
         <select
           id="reason"
           className="control"
-          value={reason}
+          value={form.reason}
           onChange={handleReasonChange}
         >
           <option value="error">Have error</option>
           <option value="help">Need help</option>
           <option value="suggest">Have suggest</option>
         </select>
-        <pre>
-          Name: {name}
-          <br />
-          Reason: {reason}
-        </pre>
-        <Button disabled={hasError} isActive={!hasError}>
+        <pre>{JSON.stringify(form, null, 2)}</pre>
+        <Button disabled={form.hasError} isActive={!form.hasError}>
           Отправить
         </Button>
       </form>

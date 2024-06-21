@@ -1,8 +1,11 @@
 import "./Button.css";
 
-export function Button({ children, onClick }) {
+export function Button({ children, onClick, isActive }) {
+  let classes = "button";
+  if (isActive) classes += " active";
+
   return (
-    <button className="button" onClick={onClick}>
+    <button className={classes} onClick={onClick}>
       {children}
     </button>
   );

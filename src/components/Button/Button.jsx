@@ -1,20 +1,8 @@
 import "./Button.css";
 
-export function Button({ children }) {
-  function handleClick() {
-    console.log(`click at ${children}`);
-  }
-
-  function handleMouseEnter() {
-    // console.log(`mouse at ${children}`)
-  }
-
+export function Button({ children, onClick }) {
   return (
-    <button
-      className="button"
-      onClick={handleClick}
-      // onMouseEnter={() => {console.log(`mouse at ${children}`)}}
-    >
+    <button className="button" onClick={onClick}>
       {children}
     </button>
   );

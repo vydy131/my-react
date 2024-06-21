@@ -15,9 +15,16 @@ export function FeedbackSection() {
     setReason(event.target.value);
   }
 
+  function toggleError() {
+    setHasError((prev) => !prev);
+    // setHasError(!hasError);
+  }
+
   return (
     <section>
       <h3>Feedback</h3>
+
+      <Button onClick={toggleError}>Toggle error</Button>
 
       <form>
         <label htmlFor="name">Your name</label>

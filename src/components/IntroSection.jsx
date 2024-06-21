@@ -13,10 +13,10 @@ import React from "react";
 
 export function IntroSection() {
   return React.createElement("section", null, [
-    React.createElement("h1", { className: "centered" }, "NAME"),
+    React.createElement("h1", { className: "centered", key: 20 }, "NAME"),
     React.createElement(
       "h3",
-      { className: "centered", style: { color: "#666" } },
+      { className: "centered", style: { color: "#666" }, key: 21 },
       "ABOUT US"
     ),
   ]);

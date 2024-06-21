@@ -1,11 +1,11 @@
 import "./Button.css";
 
-export function Button({ children, onClick, isActive }) {
+export function Button({ children, isActive, ...props }) {
   let classes = "button";
   if (isActive) classes += " active";
 
   return (
-    <button className={classes} onClick={onClick}>
+    <button {...props} className={classes}>
       {children}
     </button>
   );

@@ -7,7 +7,7 @@ import { FeedbackSection } from "./components/FeedbackSection";
 import { useState } from "react";
 
 export default function App() {
-  const [tab, setTab] = useState("main");
+  const [tab, setTab] = useState("feedback");
 
   return (
     <>

@@ -1,26 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Header from "./components/Header/Header";
+import TabsSelector from "./components/TabsSelector";
 
-function App() {
+// хочу свой сайт
+// СДЕЛАНО с хэдером
+// СДЕЛАНО после него идут табы
+//  СДЕЛАНО табы включают кнопки, которые переключают вкладки
+// СДЕЛАНО табы подсвечиваются если активны
+// таб с инфой из json
+// таб с каким нибудь списком, может импортнутьб Json
+// таб с формой
+// кнопочки справа внизу
+// возможно потом стоит продумать роутинг, просто для галочки
+// после этого подумать насчет mobx
+
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header />
+      <main>
+        <TabsSelector />
+      </main>
+    </>
   );
 }
-
-export default App;

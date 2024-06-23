@@ -1,27 +1,29 @@
-[
-  {
-    "title": "A Comprehensive Guide to Testing",
-    "description": "This is an extensive guide covering all aspects of testing. From unit tests to integration tests, learn best practices and tools.",
-    "metadata": "John Doe"
-  },
-  {
-    "title": "Understanding Async Programming",
-    "description": "Asynchronous programming can be tricky. This article breaks down the concepts and provides clear examples for better understanding.",
-    "metadata": "Jane Smith"
-  },
-  {
-    "title": "Exploring the Universe of APIs",
-    "description": "APIs are the backbone of modern applications. Discover how to design, implement, and maintain robust APIs.",
-    "metadata": "Albert Newton"
-  },
-  {
-    "title": "Mastering CSS for Modern Web Design",
-    "description": "CSS is a powerful tool for web designers. This piece dives into advanced techniques to create stunning, responsive web designs.",
-    "metadata": "Emily Clark"
-  },
-  {
-    "title": "The Future of Artificial Intelligence",
-    "description": "AI is rapidly evolving. Explore the latest trends, challenges, and predictions for the future of artificial intelligence.",
-    "metadata": "Michael Johnson"
-  }
-]
+{
+  "texts": [
+    {
+      "title": "A Comprehensive Guide to Testing",
+      "description": "This is an extensive guide covering all aspects of testing. From unit tests to integration tests, learn best practices and tools.",
+      "metadata": "John Doe"
+    },
+    {
+      "title": "Understanding Async Programming",
+      "description": "Asynchronous programming can be tricky. This article breaks down the concepts and provides clear examples for better understanding.",
+      "metadata": "Jane Smith"
+    },
+    {
+      "title": "Exploring the Universe of APIs",
+      "description": "APIs are the backbone of modern applications. Discover how to design, implement, and maintain robust APIs.",
+      "metadata": "Albert Newton"
+    },
+    {
+      "title": "Mastering CSS for Modern Web Design",
+      "description": "CSS is a powerful tool for web designers. This piece dives into advanced techniques to create stunning, responsive web designs.",
+      "metadata": "Emily Clark"
+    },
+    {
+      "title": "The Future of Artificial Intelligence",
+      "description": "AI is rapidly evolving. Explore the latest trends, challenges, and predictions for the future of artificial intelligence.",
+      "metadata": "Michael Johnson"
+    }
+  ]
+}

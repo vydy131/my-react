@@ -40,11 +40,12 @@ export default function TabsSelector() {
       >
         List
       </Button>{" "}
-      <br />
-      {current === Tabs.info && <InfoTab />}
-      {current === Tabs.form && <FormTab />}
-      {current === Tabs.about && <AboutTab />}
-      {current === Tabs.list && <ListTab />}
+      <div>
+        {current === Tabs.info && <InfoTab />}
+        {current === Tabs.form && <FormTab />}
+        {current === Tabs.about && <AboutTab />}
+        {current === Tabs.list && <ListTab />}
+      </div>
     </>
   );
 }

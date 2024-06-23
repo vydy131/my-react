@@ -1,26 +1,21 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import TaskTag, { Task } from "./components/Task";
 
-function App() {
+export default function App() {
+  let tasks: Task[] = [
+    new Task("Create todo-react-app"),
+    new Task("Make a react project"),
+    new Task("Create a class with titles"),
+  ];
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1 className="top">Active tasks: {Task.quantity / 2}</h1>
+      {/**because there is copy consctuctor who call for quaintity setter and whats why this variable doubles itself
+       * maybe it easier to change getter and add division there
+       */}
+      {tasks.map((task) => (
+        <TaskTag task={task} key={task.id}></TaskTag>
+      ))}
     </div>
   );
 }
-
-export default App;
